@@ -13,4 +13,6 @@ Project 'stepik_tours' of the second week
   - Страницы выбранного направления departure_view;
   - Страницы тура tour_view
 
+Набор исходных данных взят с файла data.py  
+
 По каждому отелю реализован вывод необходимого кол-ва звёзд через кастомный фильтр stars в templatetags.
