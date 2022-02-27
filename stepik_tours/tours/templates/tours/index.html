@@ -1,0 +1,28 @@
+{% extends 'tours/base.html'%}
+{% block container %}
+  <main class="container mt-3">
+    <!-- HERO -->
+    <section class="jumbotron text-center mt-4" style="background: url('https://images.unsplash.com/photo-1468824357306-a439d58ccb1c?ixlib=rb-1.2.1&ixid"); background-position: center">
+      <h1 class="display-4">Всякие туры</h1>
+      <p class="lead">Для тех, кого отвлекают дома</p>
+      <p class="mt-5 w-50 mx-auto">Лучшие направления,где никто не будет вам мешать сидеть на берегу и изучать программирование, дизайн, разработку игр и управление продуктами</p>
+    </section>
+    <!-- CARDS -->
+    <div class="row mt-5">
+      {% for k, v in random_tours.items %} <!-- k - номер тура-->
+      <div class="col-4">
+        <div class="card mb-4">
+          <div class="embed-responsive embed-responsive-16by9">
+             <img class="card-img-top embed-responsive-item" src="{{ v.picture}}" alt="" />
+          </div>          
+          <div class="card-body">
+            <h2 class="h5 card-title">{{ v.title }}</h2>
+            <p class="card-text">{{ v.description }}</p>
+            <a href="/tour/{{ k }}" class="btn btn-sm btn-primary">Подробнее</a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </main>
+{% endblock %}
