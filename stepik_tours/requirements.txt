@@ -6,3 +6,4 @@ pycodestyle==2.8.0
 pyflakes==2.4.0
 sqlparse==0.4.2
 tzdata==2021.5
+gunicorn
